@@ -16,8 +16,8 @@ function expandText(ElemID) {
 
   var snail_img = $('#snail_img');
 
-  $('#snail_img').on('click','img',function(){alert('it works');})
+//  $('#snail_img').on('click','img',function(){alert('it works');})
 
-  snail_img.click(function(){
+  snail_img.addEventListener("click", function(){
     window.location.href='pistachio_secrets.html';
  })
