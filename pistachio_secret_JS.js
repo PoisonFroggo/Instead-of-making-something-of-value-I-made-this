@@ -16,30 +16,29 @@ I assume that the Methods need to be separate from the Event Methods, so make th
 
 
 
-
-    length = 300;
+        var top1 = $("#top1"); //selector
+        var slide = $("#slide"); //selector
     x = 1;
-    y = 1;
 document.addEventListener("DOMContentLoaded", () => {
     var  isVisible = false;
     setInterval(() => {
-        var top = $("#top");
-        var slide = $("slide");
-        top.innerHTML += x.toString();
+        top1.innerHTML += x.toString();
         x ++;
-        y ++;
         if (x > 3) {
             x = 1;
         }
 
         if (x==1) {
             slide.attr("src", "Pistachio_secret1.jpg");
+            //console.log("Pistachio_secret1.jpg");
         }
         else if(x==2) {
-            slide.attr("src", "Pistachio_secret2.jpg");
+            //$("#slide").attr("src", "Pistachio_secret2.jpg");
+            console.log($("#slide"));
         }
         else if(x==3) {
             slide.attr("src", "Pistachio_secret3.jpg");
+            //console.log("Pistachio_secret3.jpg")
         }
     }, 3000);
 });
