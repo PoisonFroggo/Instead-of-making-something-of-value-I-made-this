@@ -1,4 +1,4 @@
-
+const $ = selector => document.querySelector(selector);
 
 //check if the player has actually decided, switching the form's reference if the button is clicked
 

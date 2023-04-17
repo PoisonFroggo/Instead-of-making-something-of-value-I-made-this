@@ -1,4 +1,4 @@
-
+//For some reason the reference to $ breaks the code on this page, but removing it breaks the code on other pages. idk man
 /*Javascript file for the pistachio secrets html. Fulfill all requirements for the assignment here, even though some 
 may have been fulfilled by prior pages. 
 Requirements:
@@ -15,14 +15,14 @@ I assume that the Methods need to be separate from the Event Methods, so make th
 
 
 
-
+    microsec = 0;
     x = 1;
 document.addEventListener("DOMContentLoaded", () => {
         var top1 = $("#top1"); //selector
-    var  isVisible = false;
+        var secrets_uncovered = $("#pstcho_secret_uncovered");
+    //cycles images of pistachios
     setInterval(() => {
-        top1.innerHTML += x.toString();
-        var slide1 = document.getElementById('slide');
+        //top1.innerHTML += x.toString();
         var slide = $("#slide"); //selector
         x ++;
         if (x > 3) {
@@ -42,4 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
             //console.log("Pistachio_secret3.jpg")
         }
     }, 3000);
+
+    setInterval(() => {
+        microsec +=.1
+        secrets_uncovered.html(microsec.toString());
+    }, 100);
+
+    
 });
