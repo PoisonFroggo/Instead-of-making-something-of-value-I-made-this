@@ -1,4 +1,4 @@
-const $ = selector => document.querySelector(selector);
+
 /*Javascript file for the pistachio secrets html. Fulfill all requirements for the assignment here, even though some 
 may have been fulfilled by prior pages. 
 Requirements:
@@ -16,13 +16,14 @@ I assume that the Methods need to be separate from the Event Methods, so make th
 
 
 
-        var top1 = $("#top1"); //selector
-        var slide = $("#slide"); //selector
     x = 1;
 document.addEventListener("DOMContentLoaded", () => {
+        var top1 = $("#top1"); //selector
     var  isVisible = false;
     setInterval(() => {
         top1.innerHTML += x.toString();
+        var slide1 = document.getElementById('slide');
+        var slide = $("#slide"); //selector
         x ++;
         if (x > 3) {
             x = 1;
@@ -33,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
             //console.log("Pistachio_secret1.jpg");
         }
         else if(x==2) {
-            //$("#slide").attr("src", "Pistachio_secret2.jpg");
-            console.log($("#slide"));
+            slide.attr("src", "Pistachio_secret2.jpg");
+            //console.log(slide1.attr("src"));
         }
         else if(x==3) {
             slide.attr("src", "Pistachio_secret3.jpg");
