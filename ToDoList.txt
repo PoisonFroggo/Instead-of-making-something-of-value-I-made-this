@@ -1,0 +1,25 @@
+
+=======================
+=====REQUIREMENTS======
+=======================
+
+-At least one timer
+-At least one selector
+-Insert and remove html elements (at least one instance of each)
+-Use of multiple themes
+	-Utilize multiple stylesheet files and have the JS swap them
+	-Or, utilize classes on elements to switch the rules that apply to each
+-At least one use of an anonymous method
+-At least 3 JQuery and/or normal Event Handlers
+-Exception Handling
+-At least one input that affects the output of the program
+	-This can be text input, a button, etc.
+-At least 1 use of a regular expression to compare data
+
+
+Final Project assignment will be accessed via clicking the gherkin face when the face is happy mode. This won't
+be included in the presentation because I don't want to explain the entire Gnomermensch page again.
+The page is called Loredump. It's just a loredump for the Eclectic game world
+Timer: The timer tracks how many seconds the user has been on the page
+Selector: The selector is used on the dropdown buttons to hide or reveal the information
+Insert html elements

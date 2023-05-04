@@ -5,7 +5,7 @@ body {
     margin-top: 10px;
     width: auto;
     padding: 0 0em 1em;
-    background-image: url("PepePray.jpg");
+    background-image: url("images/PepePray.jpg");
 }
 main {
     background-color: white;
@@ -13,7 +13,7 @@ main {
     border: 3px solid blue;
     padding: 0 2em 1em;
     margin: auto;
-    background-image: url("GherkinIcon.png");
+    background-image: url("images/GherkinIcon.png");
 }
 h1 {
     color: black;
@@ -71,7 +71,7 @@ span {
   margin-top: 3px;
   margin-bottom: 3px;
   color: black;
-  width: 600px;
+  width: 550px;
   text-align: center;
   background-color: white;
     padding: 3px;

@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Worship the Great Gherkin</title>
     <link id='stylesheet' rel="stylesheet" href="Index_Source.css">
+    <link id="searchbarstylesheet" rel="stylesh" href="../Search_bar_css.css">
 </head>
 <body>
+    <h2>
+        <input type="text" id="Search_bar" name="Search_bar">
+        <br>
+        <input type="button" id="search_btn" value="Calculate Future Value">
+    </h2>
+
     <main>
         <h1 id="PraiseCommand"></h1>
         <h1 id="WorshipDemand">Praise the Gherkin</h1>
@@ -23,7 +30,7 @@
             </div>
 
             <div>
-                <label for="buttonStatus" id="RadioStatus"><img src="NeutralGherkin.png" id="Gherkin_image" class="center"></label>
+                <label for="buttonStatus" id="RadioStatus"><img src="../images/NeutralGherkin.png" id="Gherkin_image" class="center"></label>
             </div>
 
             <div>
@@ -32,6 +39,6 @@
         </form>
     </main>
     <script src="Gherkin_JS.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Search_bar_lib.js"></script>
 </body>
 </html>

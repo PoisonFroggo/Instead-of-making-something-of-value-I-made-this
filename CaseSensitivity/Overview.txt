@@ -1,0 +1,2 @@
+Here we have pages which discuss how frustrating case sensitivity can be. 
+Maybe have one page and change all the text to be upper or lowercase based on which it is?

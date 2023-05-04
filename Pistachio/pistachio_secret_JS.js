@@ -13,37 +13,39 @@ For event methods, it would be cool to have one for each image being clicked, I 
 I assume that the Methods need to be separate from the Event Methods, so make them their own things
 */
 
+//Here I removed Jquery references because I don't like Jquery
+
 
 
     microsec = 0;
     x = 1;
 document.addEventListener("DOMContentLoaded", () => {
-        var top1 = $("#top1"); //selector
+        var top1 = document.getElementById("top1"); //selector
         var secrets_uncovered = $("#pstcho_secret_uncovered");
     //cycles images of pistachios
     setInterval(() => {
         //top1.innerHTML += x.toString();
-        var slide = $("#slide"); //selector
+        var slide = document.getElementById("slide"); //selector
         x ++;
         if (x > 3) {
             x = 1;
         }
 
         if (x==1) {
-            slide.attr("src", "Pistachio_secret1.jpg");
+            slide.setAttribute("src", "images/Pistachio_secret1.jpg");
             //console.log("Pistachio_secret1.jpg");
         }
         else if(x==2) {
-            slide.attr("src", "Pistachio_secret2.jpg");
+            slide.setAttribute("src", "images/Pistachio_secret2.jpg");
             //console.log(slide1.attr("src"));
         }
         else if(x==3) {
-            slide.attr("src", "Pistachio_secret3.jpg");
+            slide.setAttribute("src", "images/Pistachio_secret3.jpg");
             //console.log("Pistachio_secret3.jpg")
         }
     }, 3000);
 
-    setInterval(() => {
+    setInterval(() => {    //I have no clue why the number this outputs is so long. This serves as the second timer method.
         microsec +=.1
         secrets_uncovered.html(microsec.toString());
     }, 100);

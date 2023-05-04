@@ -4,7 +4,7 @@ body {
     margin: 0 auto;
     width: auto;
     padding: 0 0em 1em;
-    background-image: url("PepePray.jpg");
+    background-image: url("images/PistachioSecretBanner.png");
 }
 main {
     background-color: white;
@@ -12,7 +12,7 @@ main {
     border: 3px solid blue;
     padding: 0 2em 1em;
     margin: auto;
-    background-image: url("GherkinIcon.png");
+    background-image: url("images/GherkinIcon.png");
 }
 h1 {
     color: black;
@@ -26,9 +26,11 @@ h1 {
     background-color: black;
 }
 div {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
+  color: black;
+  width: auto;
+  text-align: center;
+  background-color: white;
+  font-size: 1.3em;
 }
 label {
     display: inline-block;
