@@ -1,11 +1,4 @@
-//For some reason the reference to $ breaks the code on this page, but removing it breaks the code on other pages. idk man
-/*Javascript file for the pistachio secrets html. Fulfill all requirements for the assignment here, even though some 
-may have been fulfilled by prior pages. 
-Requirements:
-3 JQuery Selectors
-3 JQuery Methods
-3 JQuery Event Methods
-At least 1 timer
+/*
 
 The timer will be used to cycle between the three images 'pistachio_secret1, pistachio_secret2, and pistachio_secret3'
 Selectors will be easy enough to figure out how to use
@@ -21,7 +14,7 @@ I assume that the Methods need to be separate from the Event Methods, so make th
     x = 1;
 document.addEventListener("DOMContentLoaded", () => {
         var top1 = document.getElementById("top1"); //selector
-        var secrets_uncovered = $("#pstcho_secret_uncovered");
+        var secrets_uncovered = document.getElementById("pstcho_secret_uncovered"); //Jquery references are removed, idk why this still works or why it stops working when I remove Jquery stuff. 
     //cycles images of pistachios
     setInterval(() => {
         //top1.innerHTML += x.toString();
@@ -32,23 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (x==1) {
-            slide.setAttribute("src", "images/Pistachio_secret1.jpg");
+            slide.setAttribute("src", "../images/Pistachio_secret1.jpg");
             //console.log("Pistachio_secret1.jpg");
         }
         else if(x==2) {
-            slide.setAttribute("src", "images/Pistachio_secret2.jpg");
+            slide.setAttribute("src", "../images/Pistachio_secret2.jpg");
             //console.log(slide1.attr("src"));
         }
         else if(x==3) {
-            slide.setAttribute("src", "images/Pistachio_secret3.jpg");
+            slide.setAttribute("src", "../images/Pistachio_secret3.jpg");
             //console.log("Pistachio_secret3.jpg")
         }
     }, 3000);
 
-    setInterval(() => {    //I have no clue why the number this outputs is so long. This serves as the second timer method.
-        microsec +=.1
-        secrets_uncovered.html(microsec.toString());
-    }, 100);
+    setInterval(() => { //previously this did not round, and spit out a massive string of numbers due to floating point errors. I fixed this by using whole numbers
+        microsec++;
+        secrets_uncovered.innerHTML = microsec.toString();
+    }, 200);
 
     
 });

@@ -1,0 +1,9 @@
+The site is formatted into a relatively simple little game in which the user can interact with certain sites in limited ways.
+The Gherkin in the beginning has a key in their mouth, pressing on the key will remove the key and add it to the user's 'inventory', which is
+then displayed at the bottom of the screen. A webpage is either known or unknown, it may become known if the user types the proper string to
+enter the webpage or naturally progresses to it through hitting buttons on the various pages. Their known pages appear in the corner and clicking
+on one will bring the user to it. 
+
+	Items:
+Gun: The gun displays a 2D sprite of a hand holding a gun over the cursor. Clicking with the gun allows the user to shoot the gun.
+Key: It opens a single door. Each key opens any door, with only one use before it breaks.
