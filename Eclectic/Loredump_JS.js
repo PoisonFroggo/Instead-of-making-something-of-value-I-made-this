@@ -45,8 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 3000);
 
+<<<<<<< Updated upstream:Eclectic/Loredump_JS.js
     setInterval(() => {    //I have no clue why the number this outputs is so long. This serves as the second timer method.
         microsec +=.1
+=======
+    setInterval(() => {    //This is the timer at the top of the screen that counts up.
+        microsec +=1
+>>>>>>> Stashed changes:pistachio_secret_JS.js
         secrets_uncovered.html(microsec.toString());
     }, 100);
 
