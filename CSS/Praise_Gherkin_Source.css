@@ -8,17 +8,19 @@ body {
     background-image: url("../images/PepePray.jpg");
 }
 main {
-    background-color: white;
-    width: 600px;
-    border: 3px solid blue;
+    background-color: gray;
+    width: 60vw;
+    border: 3px solid darkgray;
     padding: 0 2em 1em;
     margin: auto;
     background-image: url("../images/GherkinIcon.png");
 }
 h1 {
+    display:flex;
     color: blue;
-    width: auto;
-    text-align: center;
+    width: 50vw;
+    margin: auto;
+    justify-content: center;
     background-color: white;
 }
 #PraiseCommand {
@@ -27,6 +29,11 @@ h1 {
     background-color: black;
 }
 div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+div1 {
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
@@ -64,7 +71,16 @@ span {
     font-size: 40px;
     height: 70px;
 }
-
+.columnal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebyside {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 /* Dropdown Button */
 .dropbtn {
   position: relative;

@@ -3,5 +3,6 @@
         &copy; <?php echo date("Y"); ?> PoDaFr, Co.
     </p>
 </footer>
+</div>
 </body>
 </html>

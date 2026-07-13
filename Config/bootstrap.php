@@ -8,11 +8,13 @@ define('ROOT', dirname(__DIR__));
 //Base navigation definitions
 define('CONFIG_PATH', ROOT . '/Config');
 define('CONTROLLERS_PATH', ROOT . '/Controllers');
-define('MODELS_PATH', ROOT . '/Model');
+define('MODELS_PATH', ROOT . '/Models');
 define('VIEWS_PATH', ROOT . '/Views');
 define('CSS_PATH', '/CSS');
 define('LAYOUT_PATH' , VIEWS_PATH . '/Layout');
 
+define('DATABASE', '/database.php');
+define('DB_ERR', MODELS_PATH . '/database_error.php');
 //Definitions for layout assistance
 define('HEADER1' , LAYOUT_PATH . '/header.php');
 define('FOOTER1' , LAYOUT_PATH . '/footer.php');

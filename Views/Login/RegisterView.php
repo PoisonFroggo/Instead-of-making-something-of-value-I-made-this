@@ -2,7 +2,7 @@
 <?php include(HEADER1); ?>
     
 <header>
-    <h1>LOGIN</h1>
+<h1>REGISTER</h1>
 </header>
 <main>
     <nav>
@@ -11,7 +11,7 @@
     </nav>
     <div1>
     <form action="." method="post">
-        <input type="hidden" name="action" value="login">
+        <input type="hidden" name="action" value="register">
 
         <label for="username">
             Username
