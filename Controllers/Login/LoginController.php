@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__ . '/../../Config/bootstrap.php');
+require_once(LOGINS_MODEL_PATH . '/RegisterModel.php');
 
 
 // Get the action to perform
@@ -27,15 +28,13 @@ switch ($action) {
     case 'login':
         $username = filter_input(INPUT_POST, 'username');
         $password = filter_input(INPUT_POST, 'password');
-        echo($username);
-        echo($password);
+        loginUser($username, $password);
         break;
 
     case 'register':
         $username = filter_input(INPUT_POST, 'username');
         $password = filter_input(INPUT_POST, 'password');
-        echo($username);
-        echo($password);
+        createUser($username, $password);
         break;
         
 }

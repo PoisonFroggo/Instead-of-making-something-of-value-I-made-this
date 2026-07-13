@@ -38,7 +38,7 @@
         <br><br>
 
         <button type="submit">
-            Login
+            Register
         </button>
 
     </form>
