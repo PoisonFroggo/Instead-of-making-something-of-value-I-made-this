@@ -66,6 +66,7 @@ function loginUser($username, $password) {
 }
 
 function generateRememberMeToken($username, $password) {
+    global $db;
     $user = findUser($username);
     echo($user['id']);
 
