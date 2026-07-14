@@ -10,14 +10,15 @@ Admin/User table structure:
 */
 
 //General use function for verifying user credentials, returns the user as an associative array
-function findUser($username, $password) {
+function findUser($username) {
     global $db;
     $sql = "SELECT id, username, pwhash
                 FROM users
                 WHERE username = ?";
     try {
+        $stmt = $db->prepare($sql); 
         $stmt->execute([$username]); //question mark allows for an array of values to be input, as this is one input, it only has a single item, but this can be used several times
-        return $stmt->fetch(PDO_FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         throw $e;
     }
@@ -64,7 +65,39 @@ function loginUser($username, $password) {
     return true;
 }
 
-function generateRememberMeToken() {
-    
+function generateRememberMeToken($username, $password) {
+    $user = findUser($username);
+    echo($user['id']);
+
+    $token = bin2hex(random_bytes(32));
+    $tokenHash = password_hash($password, PASSWORD_DEFAULT); //PASSWORD_DEFAULT is the encryption method
+
+    //Expires in 30 days
+    $expires = date('Y-m-d H:i:s', strtotime('+30 days'));
+
+    $stmt = $db->prepare("
+        INSERT INTO remember_tokens
+        (user_id, token_hash, expiration)
+        VALUES (?, ?, ?)
+    ");
+
+    $stmt->execute([
+        $user['id'],
+        $tokenHash,
+        $expires
+    ]);
+
+    // Store the plain token in the cookie
+    setcookie(
+        "remember_token",
+        $token,
+        [
+            "expires" => strtotime("+30 days"),
+            "path" => "/",
+            "httponly" => true,
+            "secure" => true,      // Use HTTPS
+            "samesite" => "Lax"  //Means user gets the cookie only when visiting the site or clicking a link from another site on webpages. Forms and AJAX requests do not work (Check to see if I can do internal Forms/AJAX. Also figure out what an AJAX is.)
+        ]
+    );
 }
 ?>

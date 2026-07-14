@@ -29,6 +29,7 @@ switch ($action) {
         $username = filter_input(INPUT_POST, 'username');
         $password = filter_input(INPUT_POST, 'password');
         loginUser($username, $password);
+        generateRememberMeToken($username, $password);
         break;
 
     case 'register':
