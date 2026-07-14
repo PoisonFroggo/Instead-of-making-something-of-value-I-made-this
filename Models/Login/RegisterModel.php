@@ -62,6 +62,7 @@ function loginUser($username, $password) {
 
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
+    generateRememberMeToken($username, $password);
     return true;
 }
 
